@@ -1,0 +1,53 @@
+{
+    "main": "slacknotify",
+    "name": "SlackNotify",
+    "homepage": "",
+    "kind": "POST-PROCESSING",
+    "displayName": "SlackNotify",
+    "version": "1.0.0",
+    "author": "phnzb",
+    "license": "GNU",
+    "about": "Send Slack notification.",
+    "queueEvents": "",
+    "requirements": [ ],
+    "description": ["This script sends Slack notification when the job is done."],
+    "options": [
+        {
+            "name": "SendNotification",
+            "displayName": "SendNotification",
+            "value": "Always",
+            "description": ["When to send the message."],
+            "select": ["Always", "OnFailure"]
+        },
+        {
+            "name": "SlackToken",
+            "displayName": "SlackToken",
+            "value": "",
+            "description": ["Slack token"],
+            "select": []
+        },
+        {
+            "name": "SlackChannel",
+            "displayName": "SlackChannel",
+            "value": "",
+            "description": ["Slack channel"],
+            "select": []
+        },
+        {
+            "name": "Debug",
+            "displayName": "Debug",
+            "value": "No",
+            "description": ["Enable debug messages"],
+            "select": ["Yes", "No"]
+        }
+    ],
+    "commands": [
+        {
+            "name": "ConnectionTest",
+            "action": "Send Test Notification",
+            "displayName": "ConnectionTest",
+            "description": ["To check connection parameters click the button."]
+        }
+    ],
+    "taskTime": ""
+}
